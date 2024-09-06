@@ -67,4 +67,5 @@ post {
                  attachmentsPattern: '**/*.log'
     }
 }
+git add Jenkinsfile
 
