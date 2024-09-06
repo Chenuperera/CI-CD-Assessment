@@ -53,3 +53,18 @@ pipeline {
         }
     }
 }
+post {
+    success {
+        emailext body: 'Stage completed successfully', 
+                 subject: 'Jenkins Pipeline Success', 
+                 to: 'chenuperera13@gmail.com', 
+                 attachmentsPattern: '**/*.log'
+    }
+    failure {
+        emailext body: 'Stage failed', 
+                 subject: 'Jenkins Pipeline Failed', 
+                 to: 'chenuperera13@gmail.com', 
+                 attachmentsPattern: '**/*.log'
+    }
+}
+
